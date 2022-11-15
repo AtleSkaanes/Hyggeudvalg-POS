@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Café ordrer</title>
-    <script>
+    <script defer>
 const Salgslog  = [];
 const shoppingBag = [0,0,0,0,0,0,0];
 const itemPrices = [6,6,6,16,16,16];
@@ -337,7 +337,7 @@ function UpdateCSVDownload(file_name) {
             <div class="col">
                 <h3> Click the button to download the csv file </h3>  
                 <!-- create an HTML button to download the csvfile on click -->  
-                <a id="downloadBTN" href="#"><button class="plus" style="padding:0 10px; border-radius: var(--border-radius-full);"> Download csv</button></a> 
+                <a id="downloadBTN" href="#"><button class="plus" style="padding:0 10px; border-radius: var(--border-radius-full); margin-bottom: 100px;"> Download csv</button></a> 
             </div>
         </div>
     </div>
