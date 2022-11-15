@@ -1,4 +1,4 @@
-# Hyggeudvalg-ordrer-POS-webapp
+# Hyggeudvalg-POS
 by: [MathiTC](https://github.com/MathiTC) & [AtleSkaanes](https://github.com/AtleSkaanes)
 
 This is a project for a school club, that makes fun afternoons.
