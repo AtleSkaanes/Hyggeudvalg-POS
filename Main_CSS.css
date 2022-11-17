@@ -26,6 +26,7 @@
     --border-radius-top: 10px 10px 0 0;
     --border-radius-bottom: 0 0 10px 10px;
     --border-radius-full: 10px;
+    --border-radius-circle: 50%;
 }
 
 
@@ -58,11 +59,11 @@ h1 {
     top: 5px;
 }
 
-.flex-c-container {
+.flex-r-container {
     display: flex;
     flex-direction: row;
     width: 80%;
-    height: 500px;
+    height: 700px;
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
@@ -200,12 +201,55 @@ button.minus {
     height: 50px;
 }
 
-button .icon-button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    flex: 0;
+button.plus.icon-button {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: var(--border-radius-circle);
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-left: 200px;
 }
+
+button.plus.icon-button::after {
+    content: '+';
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    text-align: center;
+    line-height: 35px;
+    font-size: 30px;
+    background-color: var(--plus-button-main-color);
+    border-radius: var(--border-radius-circle);
+}
+
+button.plus.icon-button::before {
+    content:'Tilføj kolonne';
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 35px;
+    right: 0;
+    top: 0;
+    text-align: center;
+    line-height: 35px;
+    text-overflow:clip;
+    white-space: nowrap;
+    padding-right: 35px;
+    overflow: hidden;
+    background-color: var(--plus-button-main-color);
+    box-shadow: var(--underlay-shadow) var(--plus-button-shadow-color);
+    border-radius: calc(0.5*35px);
+    transition: width 0.2s ease-in-out;
+}
+button.plus.icon-button:hover::before {
+    width: 150px;
+    height: 35px; 
+}
+button.plus.icon-button:active::before { box-shadow: none;}
+
 
 
 button:active {
