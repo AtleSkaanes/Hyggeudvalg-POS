@@ -16,8 +16,8 @@
 		</nav>
 	</div>
 
-    <div class="flex-r-container">
-        <div class="container">
+    <div class="flex-r-container" style="gap:50px">
+        <div class="container flex-c">
             <div class="box">
                 <h4>Drikkevare</h4>
                 <div class="row">
@@ -26,11 +26,23 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="box">
+        <div class="container flex-c" style="gap:50px;">
+            <div class="box" style="width:100%;">
                 <h4>Snacks</h4>
-                <div class="row">
+                <div class="row item">
                     <button class="plus" style="border-radius: var(--border-radius-full);">Tilføj Produkt</button>
+                </div>
+            </div>
+            <div class="box" style="width: 100%;">
+                <div class="row item" id="Sour-creme-&-onion-box">
+                    <div class="corner-buttons">
+                        <button><img src="/SVG/Edit-icon.svg" class="small-icon"></button>
+                        <button><img src="/SVG/Delete-icon.svg" class="small-icon red"></button>
+                    </div>
+                    <div>
+                        <h2>Sour Creme & Onion</h2>
+                        <h3>16 kr.</h3>
+                    </div>
                 </div>
             </div>
         </div>
